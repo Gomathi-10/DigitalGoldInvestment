@@ -1,0 +1,54 @@
+<div class="live-price-container">
+    <div class="price-label">Live Gold Price (incl. GST)</div>
+    <div class="price-value">
+        <span class="currency-symbol">₹</span>
+        <span id="live-gold-price">...</span>
+        <span class="unit-label">/ gram</span>
+    </div>
+    <div class="update-info">Last update: <span id="last-updated-time"></span></div>
+</div>
+
+<script>
+    const priceElement = document.getElementById('live-gold-price');
+    const timeElement = document.getElementById('last-updated-time');
+
+    function updateGoldPrice() {
+        // 1. Fetch data from your Django endpoint
+        fetch('/api/v1/gold-price/') 
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // 2. Format the price
+                const formattedPrice = new Intl.NumberFormat('en-IN', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                }).format(data.price_per_gram_inr);
+                
+                // 3. Update the HTML elements
+                priceElement.textContent = formattedPrice;
+
+                // 4. Update the timestamp
+                const date = new Date(data.timestamp * 1000); // Unix timestamp is in seconds
+                timeElement.textContent = date.toLocaleTimeString('en-IN', {
+                    hour: '2-digit', 
+                    minute:'2-digit', 
+                    hour12: true, 
+                    timeZone: 'Asia/Kolkata'
+                });
+            })
+            .catch(error => {
+                console.error('Failed to fetch price:', error);
+                priceElement.textContent = "Unavailable";
+            });
+    }
+
+    // Run immediately on page load
+    updateGoldPrice(); 
+
+    // Refresh the price every 60 seconds (must match or exceed your CACHE_TIMEOUT)
+    setInterval(updateGoldPrice, 60000); 
+</script>

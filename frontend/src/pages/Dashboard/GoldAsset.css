@@ -1,0 +1,102 @@
+.gold-assets-card {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+}
+
+/* Header */
+.gold-assets-header {
+  margin-bottom: 10px;
+}
+
+.gold-assets-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info-icon {
+  width: 16px;
+  height: 16px;
+  color: #888;
+}
+
+/* Content area */
+.gold-assets-content {
+  margin-top: 10px;
+}
+
+/* Grid for asset boxes */
+.assets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Asset box */
+.asset-box {
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #e2e2e2;
+}
+
+.asset-label {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.asset-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.asset-value.primary {
+  color: #2563eb;
+}
+
+/* Input + Button */
+.collect-section {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.collect-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  background: #fafafa;
+  font-size: 14px;
+}
+
+.collect-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.collect-button {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.collect-button:hover {
+  background: #1d4ed8;
+}

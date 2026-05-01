@@ -1,0 +1,233 @@
+/* TransactionHistory.css */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.history-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 0.5rem;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.filter-btn,
+.export-btn,
+.clear-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.clear-filter-btn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.filter-btn:hover,
+.export-btn:hover {
+  background: rgba(16, 185, 129, 0.2);
+  transform: translateY(-2px);
+}
+
+.clear-filter-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: translateY(-2px);
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.filter-item input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Fix for date input icons in some browsers */
+.filter-item input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.history-table-container {
+  background: rgba(20, 20, 20, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-x: auto;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.history-table th {
+  text-align: left;
+  padding: 1rem;
+  color: #a0a0a0;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.history-table td {
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+}
+
+.history-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Type Column */
+.txn-type {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.txn-icon-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.txn-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.txn-icon.intake {
+  color: #10b981;
+}
+
+.txn-icon.outtake {
+  color: #ef4444;
+}
+
+/* ID Column */
+.txn-id {
+  font-family: monospace;
+  color: #808080;
+}
+
+/* Date Column */
+.txn-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.txn-date .time {
+  font-size: 0.8rem;
+  color: #808080;
+}
+
+/* Amount Column */
+.txn-amount {
+  font-weight: 600;
+}
+
+.txn-amount.positive {
+  color: #10b981;
+}
+
+.txn-amount.negative {
+  color: #ef4444;
+}
+
+/* Status Column */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-completed {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.status-pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.status-failed {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .history-actions {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+.loading-state,
+.empty-state {
+  padding: 3rem;
+  text-align: center;
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}

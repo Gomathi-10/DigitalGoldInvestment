@@ -1,0 +1,12 @@
+asgiref
+django
+djangorestframework
+django-rest-knox
+django-cors-headers
+requests
+stripe
+certifi
+charset-normalizer
+idna
+tzdata
+urllib3

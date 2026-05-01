@@ -1,0 +1,348 @@
+/* =========================================================== */
+/*      GOLD COIN PAGE - ULTIMATE CLEAN HORIZONTAL DESIGN      */
+/* =========================================================== */
+
+/* 1. Global Page Setup */
+.buy-coins-container {
+    padding: 40px !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    color: #ffffff !important;
+    background: transparent !important;
+    min-height: 100vh !important;
+}
+
+.buy-coins-header {
+    margin-bottom: 50px !important;
+    text-align: left !important;
+}
+
+.buy-coins-title {
+    font-family: "Playfair Display", serif !important;
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    margin-bottom: 15px !important;
+    background: linear-gradient(135deg, #ffffff 0%, #10b981 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.buy-coins-subtitle {
+    font-size: 1.25rem !important;
+    color: #94a3b8 !important;
+    max-width: 800px !important;
+    line-height: 1.6 !important;
+}
+
+/* 2. Vault Balance Card */
+.balance-card {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(10, 10, 10, 0.95) 100%) !important;
+    border: 1px solid rgba(16, 185, 129, 0.3) !important;
+    border-radius: 24px !important;
+    padding: 30px 40px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 50px !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+.balance-info h3 {
+    font-size: 0.9rem !important;
+    color: #64748b !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 8px !important;
+}
+
+.balance-row {
+    display: flex !important;
+    gap: 30px !important;
+    align-items: center !important;
+    margin-top: 10px !important;
+    flex-wrap: wrap !important;
+}
+
+.balance-item {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+}
+
+.balance-label {
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    color: #64748b !important;
+    font-weight: 700 !important;
+}
+
+.balance-amount {
+    font-size: 2.2rem !important;
+    font-weight: 950 !important;
+    color: #10b981 !important;
+    margin: 0 !important;
+    text-shadow: 0 0 30px rgba(16, 185, 129, 0.2) !important;
+}
+
+.balance-divider {
+    width: 2px !important;
+    height: 45px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px !important;
+}
+
+/* 3. The Grid Container */
+.coins-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    width: 100% !important;
+}
+
+/* 4. The Horizontal Coin Card - NO HOVER EFFECTS */
+.coin-card {
+    background: #0d0d0d !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 24px !important;
+    padding: 40px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    /* STRICT HORIZONTAL */
+    align-items: center !important;
+    gap: 60px !important;
+    position: relative !important;
+    width: 100% !important;
+    min-height: 300px !important;
+    /* Hover effects removed as per user request */
+    transition: border-color 0.3s ease !important;
+}
+
+.coin-card:hover {
+    border-color: rgba(16, 185, 129, 0.5) !important;
+    /* No transforms or shifts allowed here */
+}
+
+/* 5. Image Section (LEFT) */
+.coin-image-container {
+    flex: 0 0 280px !important;
+    /* FIXED WIDTH FOR IMAGE SIDE */
+    height: 280px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%) !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(16, 185, 129, 0.05) !important;
+    position: relative !important;
+}
+
+.coin-img-wrapper {
+    width: 220px !important;
+    height: 220px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.coin-real-img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.8)) !important;
+    /* Transformation on hover removed */
+}
+
+/* 6. Details Section (RIGHT) */
+.coin-info {
+    flex: 1 !important;
+    /* TAKE REMAINING SPACE */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    text-align: left !important;
+}
+
+.coin-header-inline {
+    display: flex !important;
+    flex-direction: column !important;
+    /* Stack name and price for better readability */
+    align-items: flex-start !important;
+    gap: 5px !important;
+}
+
+.coin-name {
+    font-family: "Playfair Display", serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+}
+
+.coin-price {
+    font-size: 2.5rem !important;
+    font-weight: 950 !important;
+    color: #10b981 !important;
+    margin: 10px 0 !important;
+}
+
+.coin-weight {
+    font-size: 1.1rem !important;
+    color: #cbd5e1 !important;
+    background: rgba(16, 185, 129, 0.15) !important;
+    padding: 8px 16px !important;
+    border-radius: 50px !important;
+    border: 1px solid rgba(16, 185, 129, 0.2) !important;
+    font-weight: 600 !important;
+    width: fit-content !important;
+}
+
+/* 7. Action Buttons */
+.coin-actions {
+    width: 100% !important;
+    margin-top: 10px !important;
+}
+
+.coin-actions-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+}
+
+.purchase-buttons-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 15px !important;
+    width: 100% !important;
+}
+
+.buy-btn {
+    padding: 18px 30px !important;
+    border-radius: 12px !important;
+    font-weight: 800 !important;
+    font-size: 1.1rem !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    flex: 1 !important;
+}
+
+.btn-redeem {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: #ffffff !important;
+}
+
+.btn-redeem:hover {
+    filter: brightness(1.1) !important;
+}
+
+.btn-stripe {
+    background: rgba(16, 185, 129, 0.1) !important;
+    color: #10b981 !important;
+    border: 1px solid rgba(16, 185, 129, 0.4) !important;
+}
+
+.btn-mock {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #94a3b8 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    max-width: 200px !important;
+}
+
+/* ── Insufficient Balance Block (hard block — no purchase option) ── */
+.insufficient-block {
+    display: flex !important;
+    align-items: center !important;
+    gap: 18px !important;
+    background: rgba(239, 68, 68, 0.07) !important;
+    border: 1px solid rgba(239, 68, 68, 0.25) !important;
+    border-radius: 16px !important;
+    padding: 20px 24px !important;
+    flex-wrap: wrap !important;
+}
+
+.insufficient-block-icon {
+    font-size: 2rem !important;
+    flex-shrink: 0 !important;
+}
+
+.insufficient-block-body {
+    flex: 1 !important;
+    min-width: 180px !important;
+}
+
+.insufficient-block-title {
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    color: #ef4444 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 6px !important;
+}
+
+.insufficient-block-desc {
+    font-size: 0.9rem !important;
+    color: rgba(255, 255, 255, 0.55) !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+}
+
+.insufficient-block-desc strong {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.insufficient-block-desc .shortfall {
+    color: #f87171 !important;
+}
+
+.btn-invest-now {
+    flex-shrink: 0 !important;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 4px 18px rgba(16, 185, 129, 0.35) !important;
+    white-space: nowrap !important;
+}
+
+.btn-invest-now:hover {
+    filter: brightness(1.1) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.5) !important;
+}
+
+/* 8. Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .coin-card {
+        flex-direction: column !important;
+        /* Safe fallback to vertical on small screens */
+        text-align: center !important;
+        gap: 30px !important;
+        padding: 30px !important;
+    }
+
+    .coin-info {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .coin-header-inline {
+        align-items: center !important;
+    }
+
+    .purchase-buttons-row {
+        flex-direction: column !important;
+    }
+
+    .btn-mock {
+        max-width: none !important;
+    }
+}

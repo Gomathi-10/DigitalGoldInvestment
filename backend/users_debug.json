@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "email": "anjali@gmail.com",
+        "is_staff": false,
+        "is_superuser": false,
+        "has_kyc": false
+    },
+    {
+        "id": 2,
+        "email": "kani@gmail.com",
+        "is_staff": false,
+        "is_superuser": false,
+        "has_kyc": false
+    },
+    {
+        "id": 3,
+        "email": "gomathi@gmail.com",
+        "is_staff": true,
+        "is_superuser": true,
+        "has_kyc": false
+    },
+    {
+        "id": 4,
+        "email": "ponu@gmail.com",
+        "is_staff": false,
+        "is_superuser": false,
+        "has_kyc": true
+    }
+]

@@ -1,0 +1,17 @@
+--- User List ---
+ID: 1, Email: anjali@gmail.com, Username: anjali, Has KYC: False, KYC Status: N/A
+ID: 2, Email: kani@gmail.com, Username: Kani, Has KYC: False, KYC Status: N/A
+ID: 3, Email: gomathi@gmail.com, Username: Gomathi, Has KYC: False, KYC Status: N/A
+ID: 4, Email: ponu@gmail.com, Username: Chinnaponu, Has KYC: True, KYC Status: pending
+ID: 5, Email: reena@gmail.com, Username: Reena, Has KYC: True, KYC Status: pending
+ID: 10, Email: invest_test@example.com, Username: None, Has KYC: False, KYC Status: N/A
+
+--- KYC Record List ---
+ID: 2, User Email: reena@gmail.com, Full Name: Reena, Status: pending, Submitted At: 2026-01-20 11:32:28.640932+00:00
+ID: 1, User Email: ponu@gmail.com, Full Name: Gomathi, Status: pending, Submitted At: 2026-01-20 08:10:05.330733+00:00
+
+--- Debugging 'chinnaponu' ---
+Found User - ID: 4, Email: ponu@gmail.com, Username: Chinnaponu
+  KYC Status: pending
+  KYC ID: 1
+  KYC Details: Gomathi, 123456789452

@@ -1,0 +1,184 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card Base — dark glass theme */
+.stat-card {
+  border-radius: 16px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover {
+  border-color: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(16, 185, 129, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Large card spans two columns */
+.large-card {
+  grid-column: span 2;
+}
+
+/* Portfolio Value — Emerald Gradient Card */
+.gradient-card {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.15) 0%,
+    rgba(5, 150, 105, 0.08) 100%
+  );
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.12);
+}
+
+.gradient-card:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 30px rgba(16, 185, 129, 0.2);
+}
+
+.white-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Header */
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-title {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.stat-icon-container {
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.stat-icon {
+  width: 18px;
+  height: 18px;
+  color: #10b981;
+}
+
+/* Value */
+.stat-value {
+  margin-top: 14px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+/* Portfolio big value — bright emerald */
+.gradient-card .stat-value {
+  font-size: 34px;
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.big-text {
+  font-size: 34px;
+}
+
+.growth-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 8px;
+  letter-spacing: 0.3px;
+}
+
+/* ─── Color Themes ─── */
+
+/* Gold */
+.gold {
+  background: rgba(212, 160, 23, 0.07);
+  border-color: rgba(212, 160, 23, 0.2);
+}
+
+.gold:hover {
+  border-color: rgba(212, 160, 23, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(212, 160, 23, 0.1);
+}
+
+.gold .stat-icon-container {
+  background: rgba(212, 160, 23, 0.12);
+  border-color: rgba(212, 160, 23, 0.25);
+}
+
+.gold .stat-icon {
+  color: #f59e0b;
+}
+
+.gold .stat-value {
+  color: #fbbf24;
+}
+
+/* Digital Assets */
+.digital {
+  background: rgba(59, 130, 246, 0.07);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.digital:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.digital .stat-icon-container {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.digital .stat-icon {
+  color: #60a5fa;
+}
+
+.digital .stat-value {
+  color: #93c5fd;
+}
+
+/* Fiat */
+.fiat {
+  background: rgba(139, 92, 246, 0.07);
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+.fiat:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(139, 92, 246, 0.1);
+}
+
+.fiat .stat-icon-container {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+.fiat .stat-icon {
+  color: #a78bfa;
+}
+
+.fiat .stat-value {
+  color: #c4b5fd;
+}
