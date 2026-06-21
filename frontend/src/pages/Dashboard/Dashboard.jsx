@@ -7,7 +7,7 @@ import Header from "./Header";
 import StatsCards from "./StatsCards";
 import GoldPriceCard from "./GoldPriceCard";
 import GoldAssetsCard from "./GoldAsset";
-import "./dashboard.css";
+import "./Dashboard.css";
 
 const Dashboard = () => {
   const [user, setUser] = useState({ firstname: "User" });

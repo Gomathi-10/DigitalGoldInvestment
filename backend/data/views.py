@@ -185,6 +185,8 @@ from .serializers import InvestmentSerializer, GoldVaultSerializer
 from .models import GoldVault, Investment
 
 # Initialize Stripe (Using the secret key provided by the user)
+from dotenv import load_dotenv
+load_dotenv(settings.BASE_DIR / 'secret.env')
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
 stripe.api_key = STRIPE_SECRET_KEY
 

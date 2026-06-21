@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./login.css";
+import "./Login.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import AxiosInstance from "../../AxiosInstance";
 import { useNavigate } from "react-router-dom";
