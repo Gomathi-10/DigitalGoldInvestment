@@ -10,3 +10,7 @@ charset-normalizer
 idna
 tzdata
 urllib3
+gunicorn
+dj-database-url
+psycopg2-binary
+whitenoise

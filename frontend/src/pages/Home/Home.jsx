@@ -15,7 +15,8 @@ function Home() {
     // Fetch current gold price from backend
     const fetchGoldPrice = async () => {
       try {
-        const response = await fetch('http://localhost:8000/gold-price/');
+        const API_URL = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/$/, '') : 'http://localhost:8000';
+        const response = await fetch(`${API_URL}/gold-price/`);
         const data = await response.json();
         if (data.rate) {
           setCurrentGoldRate(data.rate);

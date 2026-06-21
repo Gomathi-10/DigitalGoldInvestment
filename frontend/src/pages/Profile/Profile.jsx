@@ -52,7 +52,7 @@ const Profile = () => {
             </div>
             {fileUrl && (
                 <a
-                    href={`http://localhost:8000${fileUrl}`}
+                    href={`${import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/$/, '') : 'http://localhost:8000'}${fileUrl}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="view-doc-btn"
